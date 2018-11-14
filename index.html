@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bread's List</title>
+</head>
+
+<body>
+  <!-- SINGLE MOUNTING POINT -->
+  <!--1. First thing we Do is make the class="app"!-->
+  <div class="app">
+    <button class="btn btn-primary" onclick="app.controllers.autosController.showAutos()">Autos</button>
+    <!-- QUESTION RIGHT HERE???-->
+    <!-- 7. We know that we want autos to show when we click this button, so create the onclick to access the AutosControllers. Now we need to actually write that function-->
+    <button class="btn btn-primary">Real Estate</button>
+    <button class="btn btn-primary">Jobs</button>
+  </div>
+
+  <div id="main-content">
+    <!-- Create this so that we have an idea of what we want in our main content of the page. Page layout type stuff
+  -->
+  </div>
+  choose a category to start buying stuff in
+  <form onsubmit="app.controllers.autosController.addAuto(event)">
+    <!-- 20. Now we put a function onsubmit so that the page does not reload everytime this button is pressed, with the addAuto(event) event is an argument because the function is calling it. This always called event because it is a JavaScript variable. Put addAuto in the controller-->
+    <!-- 19. Create a form so we can submit data-->
+    <label for="make">Make : </label>
+    <input type="text" name="make">
+    <label for="model">Model : </label>
+    <input type="text" name="model">
+    <label for="Year">Year : </label>
+    <input type="number" name="year">
+    <label for="miles">Miles : </label>
+    <input type="number" name="miles">
+    <label for="Price">Price : </label>
+    <input type="number" name="price">
+    <label for="picture">Picture : </label>
+    <input type="url" name="img">
+    <label for="Description">Description : </label>
+    <textarea type="text" name="description"></textarea>
+    <button class="btn btn-primary">Add Auto</button>
+  </form>
+
+  <form onsubmit="app.controllers.estatesController.addEstate(event)">
+    <label for="Price">Price : </label>
+    <input type="number" name="price">
+    <label for="Sqft">Sqft : </label>
+    <input type="number" name="sqft">
+    <label for="Rooms">Rooms : </label>
+    <input type="number" name="rooms">
+    <label for="Garage Size">Garage Size : </label>
+    <input type="number" name="garage">
+    <label for="Img">Img : </label>
+    <input type="url" name="img">
+    <label for="Description">Description : </label>
+    <textarea type="text" name="description"></textarea>
+    <button type="submit" class="btn btn-primary">Add Estate</button>
+
+
+  </form>
+
+
+
+
+
+
+  <script src="app/main.js" type="module"></script>
+  <!-- 2. Link the JavaScript and type module.-->
+</body>
+
+</html>
